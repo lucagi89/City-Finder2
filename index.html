@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Cities</title>
+</head>
+<body>
+    <header>
+        <div class="header" id="header">
+            <h1>Your Ideal City</h1>
+        </div>
+        
+    </header>
+    <main>
+        <h2>Whats the best city for you?</h2>
+        <form id = "form-city">
+        <div id="radio-container" class="radio">
+            <div id = 'input-group'>
+                <label for="capital">Capital</label>
+                <input type='checkbox' id='capital' name="capital">
+            </div>
+            <div id = 'input-group'>
+                <label for="language">English Speaking</label>
+                <input type='checkbox' id='language' name="language">
+            </div>
+            <div id = 'input-group'>
+                <label for="romantic">Romantic</label>
+                <input type='checkbox' id='romantic' name="romantic">
+            </div>
+            <div id = 'input-group'>
+                <label for="modern">Modern</label>
+                <input type='checkbox' id='modern' name="modern">
+            </div>
+            <div id = 'input-group'>
+                <label for="yes">On the Coast</label>
+                <input type='checkbox' id='on-the-coast'>
+            </div>
+            <div id = "temperature">
+                <div id = "input-group">
+                 <label for="cold">Cold</label>
+                 <input type='radio' id='cold' name="weather">   
+                </div>
+                <div id = "input-group">
+                 <label for="mild">Mild</label>
+                 <input type='radio' id='mild' name="weather">   
+                </div>
+                <div id = "input-group">
+                 <label for="hot">Hot</label>
+                 <input type='radio' id='hot' name="weather">   
+                </div>
+            </div>
+            <div id = 'size'>
+                <div id = "input-group">
+                 <label for="small">Small</label>
+                 <input type='radio' id='small' name="size">   
+                </div>
+                <div id = "input-group">
+                  <label for="medium">Medium</label>
+                 <input type='radio' id='medium' name="size">  
+                </div>
+                <div id = "input-group">
+                 <label for="large">Large</label>
+                 <input type='radio' id='large' name="size">   
+                </div>
+                
+            </div>
+        </div>
+        </form>
+        <button id = 'press-btn'>FIND CITY</button>
+        <button id = 'restart-btn'>RESTART</button>
+        <button id = 'new-city-btn'>INSERT NEW CITY</button>
+        <div id ='result' class="result">
+
+        </div>
+        <form id="new-city-form" class="new-city hidden">
+            <h2>Add a City</h2>
+            <input type="text" id="name-city" name="name-city" placeholder="Name..."></input>
+            <input type="text" id="country-city" name="country-city" placeholder="Country..."></input>
+            
+            <p>Is it a Capital?</p>
+                <div id = 'answers' class="answers">
+                    <div id = "new-city-input-group">
+                      <label for="yes">Yes</label>
+                       <input type='radio' id='yes' name="status" value="y">   
+                    </div>
+                    <div id = "new-city-input-group">
+                      <label for="no">No</label>
+                       <input type='radio' id='no' name="status" value="n">
+                    </div>
+                </div>    
+                
+            <p>Is English it's main Language?</p>
+                <div id = 'answers' class="answers">
+                    <div id = "new-city-input-group">
+                      <label for="yes">Yes</label>
+                        <input type='radio' id='yes' name="english" value="y">    
+                    </div>
+                    <div id = "new-city-input-group">
+                      <label for="no">No</label>
+                        <input type='radio' id='no' name="english" value="n">    
+                    </div>
+                </div>  
+                
+            <p>Is it Romantic?</p>
+                <div id = 'answers' class="answers">
+                    <div id = "new-city-input-group">
+                      <label for="yes">Yes</label>
+                       <input type='radio' id='yes' name="romance" value="y">    
+                    </div> class="answers"
+                    <div id = "new-city-input-group">
+                      <label for="no">No</label>
+                       <input type='radio' id='no' name="romance" value="n">      
+                    </div>
+                </div>
+                
+            <p>Is it Modern?</p>
+                <div id = 'answers' class="answers">
+                    <div id = "new-city-input-group">
+                     <label for="yes">Yes</label>
+                      <input type='radio' id='yes' name="modernity" value="y">   
+                    </div>
+                    <div id = "new-city-input-group">
+                     <label for="no">No</label>
+                      <input type='radio' id='no' name="modernity" value="n">  
+                    </div>
+                </div>   
+                
+            <p>Is it On The Coast?</p>
+                <div id = 'answers' class="answers">
+                    <div id = "new-city-input-group">
+                      <label for="yes">Yes</label>
+                        <input type='radio' id='yes' name="coast" value="y">   
+                    </div>
+                    <div id = "new-city-input-group">
+                      <label for="no">No</label>
+                        <input type='radio' id='no' name="coast" value="n">   
+                    </div>
+                </div>   
+                
+            <p>What is the Temperature?</p>
+                <div id = 'answers' class="answers">
+                    <div id = "new-city-input-group">
+                      <label for="cold">Cold</label>
+                       <input type='radio' id='cold-temp' name="temp">  
+                    </div>
+                    <div id = "new-city-input-group">
+                      <label for="mild">Mild</label>
+                       <input type='radio' id='mild-temp' name="temp">  
+                    </div>
+                    <div id = "new-city-input-group">
+                     <label for="hot">Hot</label>
+                       <input type='radio' id='hot-temp' name="temp">  
+                    </div>
+                </div>     
+               
+            <p>What is the Size?</p>
+                <div id = 'answers' class="answers">
+                    <div id = "new-city-input-group">
+                     <label for="small">Small</label>
+                      <input type='radio' id='small-size' name="measure">  
+                    </div>
+                    <div id = "new-city-input-group">
+                     <label for="medium">Medium</label>
+                      <input type='radio' id='medium-size' name="measure">   
+                    </div>
+                    <div id = "new-city-input-group">
+                     <label for="large">Large</label>
+                      <input type='radio' id='large-size' name="measure">   
+                    </div>
+                </div>
+           <button id="submit-btn">SUBMIT</button>
+        </form>
+    </main>
+    <div class="">
+
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
+            

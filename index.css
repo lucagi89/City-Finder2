@@ -1,0 +1,138 @@
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Crete Round', serif;
+    background-color: rgb(185, 236, 245);
+    color: #000;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    border: #000 2px solid;
+}
+
+h1{
+    color:rgb(68, 115, 216);
+    font-size: 50px;
+    padding: none;
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: radio;
+	border: 1px solid #cacece;
+	padding: 6px;
+	border-radius: 50px;
+}
+
+input[type="text"]{
+    margin: 10px auto;
+}
+
+button{
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(68, 115, 216);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+label{
+    display: block;
+    width:150px;
+    margin: 0 auto;
+    font-size: 13px;
+
+    text-align: center;
+}
+input{
+    display: block;
+    margin: 0 auto;
+}
+#temperature{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:190px;
+}
+#size{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:190px;
+}
+
+#input-group{
+    margin: 10px auto;
+    padding: none;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    align-items: center;
+    width:120px;
+    border-bottom:1px solid ;
+}
+
+.answers{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    width:200px;
+}
+
+.hidden{
+    display: none;
+}
+
+#new-city-form{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 10px;
+    height: 570px;
+    width: 250px;
+    border-radius: 5px; 
+    box-shadow: 0px 0px 6px 2px #666;
+    background-color: #212529;
+    color: whitesmoke;
+}
+
+textarea{
+    background-color: #212529;
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 0px;
+    resize: none;
+}
+
+#new-city-input-group{
+    margin: 10px 0px;
+    padding: none;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    align-items: center;
+    width:60px;
+}
