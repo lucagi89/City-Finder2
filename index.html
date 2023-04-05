@@ -8,77 +8,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Cities</title>
+    <title>City Finder</title>
 </head>
 <body>
-    <header>
-        <div class="header" id="header">
-            <h1>Your Ideal City</h1>
-        </div>
+    <main id="body-containter" class="body-containter">
+        <header>
+            <div class="header" id="header">
+                <h1>Your Ideal City</h1>
+            </div>
         
-    </header>
-    <main>
-        <h2>Whats the best city for you?</h2>
-        <form id = "form-city">
-        <div id="radio-container" class="radio">
-            <div id = 'input-group'>
-                <label for="capital">Capital</label>
-                <input type='checkbox' id='capital' name="capital">
-            </div>
-            <div id = 'input-group'>
-                <label for="language">English Speaking</label>
-                <input type='checkbox' id='language' name="language">
-            </div>
-            <div id = 'input-group'>
-                <label for="romantic">Romantic</label>
-                <input type='checkbox' id='romantic' name="romantic">
-            </div>
-            <div id = 'input-group'>
-                <label for="modern">Modern</label>
-                <input type='checkbox' id='modern' name="modern">
-            </div>
-            <div id = 'input-group'>
-                <label for="yes">On the Coast</label>
-                <input type='checkbox' id='on-the-coast'>
-            </div>
-            <div id = "temperature">
-                <div id = "input-group">
-                 <label for="cold">Cold</label>
-                 <input type='radio' id='cold' name="weather">   
+        </header>
+            <h2>Whats the best city for you?</h2>
+            <form id = "form-city">
+            <div id="radio-container" class="radio">
+                <div id = 'input-group'>
+                    <label for="capital">Capital</label>
+                    <input type='checkbox' id='capital' name="capital">
                 </div>
-                <div id = "input-group">
-                 <label for="mild">Mild</label>
-                 <input type='radio' id='mild' name="weather">   
+                <div id = 'input-group'>
+                    <label for="language">English Speaking</label>
+                    <input type='checkbox' id='language' name="language">
                 </div>
-                <div id = "input-group">
-                 <label for="hot">Hot</label>
-                 <input type='radio' id='hot' name="weather">   
+                <div id = 'input-group'>
+                    <label for="romantic">Romantic</label>
+                    <input type='checkbox' id='romantic' name="romantic">
                 </div>
-            </div>
-            <div id = 'size'>
-                <div id = "input-group">
-                 <label for="small">Small</label>
-                 <input type='radio' id='small' name="size">   
+                <div id = 'input-group'>
+                    <label for="modern">Modern</label>
+                    <input type='checkbox' id='modern' name="modern">
                 </div>
-                <div id = "input-group">
-                  <label for="medium">Medium</label>
-                 <input type='radio' id='medium' name="size">  
+                <div id = 'input-group'>
+                    <label for="yes">On the Coast</label>
+                    <input type='checkbox' id='on-the-coast'>
                 </div>
-                <div id = "input-group">
-                 <label for="large">Large</label>
-                 <input type='radio' id='large' name="size">   
+                <div id = "temperature">
+                    <div id = "input-group">
+                     <label for="cold">Cold</label>
+                     <input type='radio' id='cold' name="weather">   
+                    </div>
+                    <div id = "input-group">
+                     <label for="mild">Mild</label>
+                     <input type='radio' id='mild' name="weather">   
+                    </div>
+                    <div id = "input-group">
+                     <label for="hot">Hot</label>
+                     <input type='radio' id='hot' name="weather">   
+                    </div>
                 </div>
-                
-            </div>
-        </div>
-        </form>
-        <button id = 'press-btn'>FIND CITY</button>
-        <button id = 'restart-btn'>RESTART</button>
-        <button id = 'new-city-btn'>INSERT NEW CITY</button>
-        <div id ='result' class="result">
+                <div id = 'size'>
+                    <div id = "input-group">
+                     <label for="small">Small</label>
+                     <input type='radio' id='small' name="size">   
+                    </div>
+                    <div id = "input-group">
+                      <label for="medium">Medium</label>
+                     <input type='radio' id='medium' name="size">  
+                    </div>
+                    <div id = "input-group">
+                     <label for="large">Large</label>
+                     <input type='radio' id='large' name="size">   
+                    </div>
 
-        </div>
-        <form id="new-city-form" class="new-city hidden">
+                </div>
+            </div>
+            </form>
+            <button id = 'press-btn'>FIND CITY</button>
+            <button id = 'restart-btn'>RESTART</button>
+            <button id = 'new-city-btn'>INSERT NEW CITY</button>
+            <div id ='result' class="result">
+
+            </div>
+        </main>
+        
+    
+    
+    <form id="new-city-form" class="new-city hidden">
+        <div id = "form-container">
             <h2>Add a City</h2>
             <input type="text" id="name-city" name="name-city" placeholder="Name..."></input>
             <input type="text" id="country-city" name="country-city" placeholder="Country..."></input>
@@ -87,11 +92,11 @@
                 <div id = 'answers' class="answers">
                     <div id = "new-city-input-group">
                       <label for="yes">Yes</label>
-                       <input type='radio' id='yes' name="status" value="y">   
+                       <input type='radio' id='yes' name="status" value=true>   
                     </div>
                     <div id = "new-city-input-group">
                       <label for="no">No</label>
-                       <input type='radio' id='no' name="status" value="n">
+                       <input type='radio' id='no' name="status" value=false>
                     </div>
                 </div>    
                 
@@ -99,11 +104,11 @@
                 <div id = 'answers' class="answers">
                     <div id = "new-city-input-group">
                       <label for="yes">Yes</label>
-                        <input type='radio' id='yes' name="english" value="y">    
+                        <input type='radio' id='yes' name="english" value=true>    
                     </div>
                     <div id = "new-city-input-group">
                       <label for="no">No</label>
-                        <input type='radio' id='no' name="english" value="n">    
+                        <input type='radio' id='no' name="english" value=false>    
                     </div>
                 </div>  
                 
@@ -111,11 +116,11 @@
                 <div id = 'answers' class="answers">
                     <div id = "new-city-input-group">
                       <label for="yes">Yes</label>
-                       <input type='radio' id='yes' name="romance" value="y">    
+                       <input type='radio' id='yes' name="romance" value=true>    
                     </div> class="answers"
                     <div id = "new-city-input-group">
                       <label for="no">No</label>
-                       <input type='radio' id='no' name="romance" value="n">      
+                       <input type='radio' id='no' name="romance" value=false>      
                     </div>
                 </div>
                 
@@ -123,11 +128,11 @@
                 <div id = 'answers' class="answers">
                     <div id = "new-city-input-group">
                      <label for="yes">Yes</label>
-                      <input type='radio' id='yes' name="modernity" value="y">   
+                      <input type='radio' id='yes' name="modernity" value=true>   
                     </div>
                     <div id = "new-city-input-group">
                      <label for="no">No</label>
-                      <input type='radio' id='no' name="modernity" value="n">  
+                      <input type='radio' id='no' name="modernity" value=false>  
                     </div>
                 </div>   
                 
@@ -135,11 +140,11 @@
                 <div id = 'answers' class="answers">
                     <div id = "new-city-input-group">
                       <label for="yes">Yes</label>
-                        <input type='radio' id='yes' name="coast" value="y">   
+                        <input type='radio' id='yes' name="coast" value=true>   
                     </div>
                     <div id = "new-city-input-group">
                       <label for="no">No</label>
-                        <input type='radio' id='no' name="coast" value="n">   
+                        <input type='radio' id='no' name="coast" value=false>   
                     </div>
                 </div>   
                 
@@ -147,15 +152,15 @@
                 <div id = 'answers' class="answers">
                     <div id = "new-city-input-group">
                       <label for="cold">Cold</label>
-                       <input type='radio' id='cold-temp' name="temp">  
+                       <input type='radio' id='cold-temp' name="temp" value="cold">  
                     </div>
                     <div id = "new-city-input-group">
                       <label for="mild">Mild</label>
-                       <input type='radio' id='mild-temp' name="temp">  
+                       <input type='radio' id='mild-temp' name="temp" value="mild">  
                     </div>
                     <div id = "new-city-input-group">
                      <label for="hot">Hot</label>
-                       <input type='radio' id='hot-temp' name="temp">  
+                       <input type='radio' id='hot-temp' name="temp" value="hot">  
                     </div>
                 </div>     
                
@@ -163,18 +168,19 @@
                 <div id = 'answers' class="answers">
                     <div id = "new-city-input-group">
                      <label for="small">Small</label>
-                      <input type='radio' id='small-size' name="measure">  
+                      <input type='radio' id='small-size' name="measure" value="small">  
                     </div>
                     <div id = "new-city-input-group">
                      <label for="medium">Medium</label>
-                      <input type='radio' id='medium-size' name="measure">   
+                      <input type='radio' id='medium-size' name="measure" value="medium">   
                     </div>
                     <div id = "new-city-input-group">
                      <label for="large">Large</label>
-                      <input type='radio' id='large-size' name="measure">   
+                      <input type='radio' id='large-size' name="measure" value="large">   
                     </div>
                 </div>
            <button id="submit-btn">SUBMIT</button>
+           <button id="cancel-btn">CANCEL</button>
         </form>
     </main>
     <div class="">

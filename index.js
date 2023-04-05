@@ -35,8 +35,13 @@ function emptyResult() {
   submitBtn.addEventListener('click', function(e){
      e.preventDefault()
       const newCityEnter = new FormData(newCityForm);
+      const newCityStatus = document.querySelector('input[name="status"]:checked');
       const cityName = newCityEnter.get('name-city');
       const cityCountry = newCityEnter.get('country-city');
+      const cityStatus = newCityEnter.get(`"${newCityStatus.id}"`);
+      console.log(cityName);
+      console.log(cityCountry);
+      console.log(cityStatus);
   });
 
 function capital(){
