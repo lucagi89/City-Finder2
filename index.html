@@ -11,7 +11,7 @@
     <title>City Finder</title>
 </head>
 <body>
-    <main id="body-containter" class="body-containter">
+    <div class="container">
         <header>
             <div class="header" id="header">
                 <h1>Your Ideal City</h1>
@@ -62,24 +62,22 @@
                     </div>
                     <div id = "input-group">
                       <label for="medium">Medium</label>
-                     <input type='radio' id='medium' name="size">  
+                      <input type='radio' id='medium' name="size">  
                     </div>
                     <div id = "input-group">
                      <label for="large">Large</label>
                      <input type='radio' id='large' name="size">   
                     </div>
-
                 </div>
             </div>
             </form>
-            <button id = 'press-btn'>FIND CITY</button>
-            <button id = 'restart-btn'>RESTART</button>
-            <button id = 'new-city-btn'>INSERT NEW CITY</button>
-            <div id ='result' class="result">
-
-            </div>
-        </main>
-        
+               <button id = 'new-city-btn'>INSERT NEW CITY</button>
+               <button id = 'restart-btn'>RESTART</button>
+               <button id = 'press-btn'>FIND CITY</button>
+               <div id ='result' class="result">
+   
+               </div>
+    </div>    
     
     
     <form id="new-city-form" class="new-city hidden">
