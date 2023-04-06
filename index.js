@@ -7,6 +7,7 @@ const insertNewCity = document.getElementById('new-city-btn');
 const submitBtn = document.getElementById('submit-btn');
 const newCityForm = document.getElementById('new-city-form');
 const result = document.getElementById('result');
+let newCity = '';
 let citiesFirstFilter = [];
 let citiesSecondFilter = [];
 let citiesThirdFilter = [];
@@ -29,15 +30,15 @@ function addNewCity(e){
    const newCityEnter = new FormData(newCityForm);
    const cityName = newCityEnter.get('name-city');
    const cityCountry = newCityEnter.get('country-city');
-   const cityStatus = document.querySelector('input[name="status"]:checked').value;
-   const cityLanguage = document.querySelector('input[name="english"]:checked').value;
-   const cityRomance = document.querySelector('input[name="romance"]:checked').value;
-   const cityModernity = document.querySelector('input[name="modernity"]:checked').value;
-   const cityOnTheCoast = document.querySelector('input[name="coast"]:checked').value;
+   const cityStatus = document.querySelector('input[name="status"]:checked').id;
+   const cityLanguage = document.querySelector('input[name="english"]:checked').id;
+   const cityRomance = document.querySelector('input[name="romance"]:checked').id;
+   const cityModernity = document.querySelector('input[name="modernity"]:checked').id;
+   const cityOnTheCoast = document.querySelector('input[name="coast"]:checked').id;
    const cityTemperature = document.querySelector('input[name="temp"]:checked').value;
    const citySize = document.querySelector('input[name="measure"]:checked').value;
 
-   cities.push({
+   newCity = {
      name: cityName,
      state: cityCountry,
      isCapital: cityStatus,
@@ -48,12 +49,12 @@ function addNewCity(e){
      size: citySize,
      isEnglishMainLanguage: cityLanguage,
      temperature: cityTemperature
-     });
+     };
  
    }
    newCityForm.classList.toggle('hidden');
    newCityForm.reset();
-   return cities;
+   console.log(newCity)
 
 
 };
@@ -61,6 +62,7 @@ function addNewCity(e){
 
 insertNewCity.addEventListener('click', function(){
     newCityForm.classList.toggle('hidden');
+    formCity.reset();
   });
 
 function emptyResult() {
@@ -86,6 +88,9 @@ function emptyResult() {
 
 function capital(){
   const capitalRadio = document.getElementById('capital');
+  if(newCity){
+    cities.push(newCity);}
+
   if (capitalRadio.checked) {
     citiesFirstFilter = cities.filter(function(city) {
       return city.isCapital === true || city.isCapital === "yes"});
