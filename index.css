@@ -17,6 +17,8 @@ body{
     height: 600px;
     margin: 0 auto;
 }
+
+/*contains the whole page*/ 
 .container{
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
@@ -43,6 +45,8 @@ input[type="checkbox"]{
 
 input{
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
 
 input[type="text"]{
@@ -69,11 +73,9 @@ button{
 }
 
 .header{
-    
     background-size: 150px;
     color: #fff;
     padding: 10px;
-    text-align: center;
 }
 
 
@@ -82,13 +84,8 @@ label{
     width:150px;
     margin: 0 auto;
     font-size: 13px;
+}
 
-    text-align: center;
-}
-input{
-    display: block;
-    margin: 0 auto;
-}
 #temperature{
     margin: 0 auto;
     display: flex;
@@ -154,13 +151,6 @@ input{
     width: 300px;
 }
 
-textarea{
-    background-color: #212529;
-    color: whitesmoke;
-    font-size: 16px;
-    padding: 0px;
-    resize: none;
-}
 
 #new-city-input-group{
     margin: 10px 0px;
