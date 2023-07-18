@@ -38,7 +38,7 @@ function addNewCity(e){
    const cityTemperature = document.querySelector('input[name="temp"]:checked').value;
    const citySize = document.querySelector('input[name="measure"]:checked').value;
 
-   newCity = {
+   newCityObj = {
      name: cityName,
      state: cityCountry,
      isCapital: cityStatus,
@@ -53,8 +53,9 @@ function addNewCity(e){
  
    }
    newCityForm.classList.toggle('hidden');
+   cities.push(newCityObj)
    newCityForm.reset();
-   console.log(newCity)
+   
 
 
 };
